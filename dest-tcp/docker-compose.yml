@@ -1,0 +1,11 @@
+version: '3'
+services:
+  tcpServer:
+    image: charat/dest-tcp:latest
+    ports:
+      - "5400:5400"
+    environment:
+      DEBUG_MODE: false
+      VERSION: 0.1.6b
+      IP_OUTPUT: 10.19.4.8
+    restart: always

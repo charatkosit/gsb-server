@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  mysqlService:
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    volumes:
+      - "./data:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: Toyota88@
+      MYSQL_DATABASE: mylobby
+    command: ['mysqld', '--character-set-server=utf8', '--collation-server=utf8_general_ci']
+    restart: always
