@@ -1,9 +1,9 @@
-version: '3'
+version: '3.9'
 services:
   tcpServer:
     image: charat/dest-tcp:latest
     ports:
-      - "5400:5400"
+      - 5400:5400
     environment:
       DEBUG_MODE: false
       VERSION: 0.1.6b
